@@ -1,7 +1,10 @@
 const taskModel = require("../models/taskModel");
 
-const getAll = (req, res) => {
-    return res.status(200).json({message: "controler ta funcionando"})
+const getAll = async (req, res) => {
+
+    const tasks = await taskModel.getAll();
+
+    return res.status(200).json(tasks[0]);
 }
 
 module.exports = {

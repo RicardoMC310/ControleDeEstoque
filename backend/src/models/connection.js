@@ -1,5 +1,6 @@
 //NOTE: imports
 const mysql = require("mysql2/promise");
+require("dotenv").config();
 
 //NOTE: criando a conexão
 const connection = mysql.createPool({
