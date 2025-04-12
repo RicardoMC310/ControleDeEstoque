@@ -1,13 +1,11 @@
-//NOTE: imports
 const express = require("express");
 const router = require("./router");
+const cors = require("cors");
 
-//NOTE: criando o app
 const app = express();
 
-//NOTE: usando o router
 app.use(express.json());
+app.use(cors());
 app.use(router);
 
-//NOTE: exportando o app
 module.exports = app;
