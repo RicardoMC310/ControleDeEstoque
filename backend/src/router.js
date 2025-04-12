@@ -7,10 +7,10 @@ const estoqueMiddleware = require("./middlewares/estoqueMiddleware");
 const router = express.Router();
 
 //NOTE: routers
-router.get("/tasks", estoqueController.getAll);
-router.post("/tasks", estoqueMiddleware.validateBody, estoqueController.createdEstoque);
-router.delete("/tasks/:id", estoqueController.deleteEstoque);
-router.put("/tasks/:id", estoqueMiddleware.validateBody, estoqueController.updateEstoque);
+router.get("/estoque", estoqueController.getAll);
+router.post("/estoque", estoqueMiddleware.validateBody, estoqueController.createdEstoque);
+router.delete("/estoque/:id", estoqueController.deleteEstoque);
+router.put("/estoque/:id", estoqueMiddleware.validateBody, estoqueController.updateEstoque);
 
 //NOTE: exportando o router
 module.exports = router;

@@ -14,7 +14,7 @@ const validateBody = (req, res, next) => {
         return res.status(400).json({ message: "a quantidade não foi enviado para o processamento"});
     }
 
-    if (body.quantity <= 0) {
+    if (body.quantity < 0) {
         return res.status(400).json({ message: "a quantidade foi enviada, mas é obrigatória ser maior que 0"});
     }
 
