@@ -6,6 +6,7 @@ const router = require("./router");
 const app = express();
 
 //NOTE: usando o router
+app.use(express.json());
 app.use(router);
 
 //NOTE: exportando o app
