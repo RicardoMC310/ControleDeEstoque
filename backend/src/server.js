@@ -1,5 +1,4 @@
 //NOTE: imports
-const express = require("express");
 const app = require("./app");
 
 //NOTE: subindo o servidor
