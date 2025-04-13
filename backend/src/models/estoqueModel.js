@@ -8,9 +8,9 @@ const getAll = async () => {
 const createEstoque = async (task) => {
     const {name, quantity} = task;
 
-    const query = "INSERT INTO estoque (name, quantity) VALUES(?, ?)"
+    const query = "INSERT INTO estoque (name, quantity, type) VALUES(?, ?, ?)"
 
-    const [createdEstoque] = await connection.execute(query, [name, quantity]);
+    const [createdEstoque] = await connection.execute(query, [name, quantity, "Híbrida"]);
     
     return {insertID: createdEstoque.insertId, message: "item criado com sucesso"};
 
@@ -22,11 +22,11 @@ const deleteEstoque = async (id) => {
 };
 
 const updateEstoque = async (id, task) => {
-    const { name, quantity } = task;
+    const { name, quantity, type } = task;
 
-    const query = "UPDATE estoque SET name = ?, quantity = ? WHERE id = ?";
+    const query = "UPDATE estoque SET name = ?, quantity = ?, type = ? WHERE id = ?";
 
-    const [updatedEstoque] = await connection.execute(query, [name, quantity, id]);
+    const [updatedEstoque] = await connection.execute(query, [name, quantity, type, id]);
     return updatedEstoque;
 };
 

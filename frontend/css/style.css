@@ -100,3 +100,16 @@ tr:nth-child(even) {
 .btn-action:nth-child(2) {
     background-color: rgba(237, 42, 42, 0.9);
 }
+
+select {
+    width: 100%;
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+

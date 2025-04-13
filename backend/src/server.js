@@ -7,4 +7,4 @@ require("dotenv").config();
 //NOTE: subindo o servidor
 const port = process.env.SERVER_PORT || 3303;
 
-app.listen(port, () => console.log(`Rodando em http://${host}:${port}`));
+app.listen(port, () => console.log(`Rodando na porta ${port}`));
