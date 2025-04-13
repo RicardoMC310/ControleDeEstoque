@@ -4,7 +4,7 @@ const inputName = document.querySelector("#input-name");
 const inputQuantity = document.querySelector("#input-quantity");
 
 const fetchEstoque = async () => {
-    const response = await fetch("http://localhost:3303/estoque");
+    const response = await fetch("https://controledeestoque-6zs0.onrender.com/estoque");
 
     const estoque = await response.json();
 
@@ -19,7 +19,7 @@ const addEstoque = async (event) => {
         quantity: inputQuantity.value
     }
 
-    await fetch("http://localhost:3303/estoque", {
+    await fetch("https://controledeestoque-6zs0.onrender.com/estoque", {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -35,7 +35,7 @@ const addEstoque = async (event) => {
 
 const deleteEstoque = async (id) => {
 
-    await fetch(`http://localhost:3303/estoque/${id}`, {
+    await fetch(`https://controledeestoque-6zs0.onrender.com/estoque/${id}`, {
         method: "delete"
     });
 
@@ -47,7 +47,7 @@ const updateEstoque = async (task) => {
 
     const { id, name, quantity, type } = task;
 
-    await fetch(`http://localhost:3303/estoque/${id}`, {
+    await fetch(`https://controledeestoque-6zs0.onrender.com/estoque/${id}`, {
         method: "put",
         headers: {
             "Content-Type": "application/json"
