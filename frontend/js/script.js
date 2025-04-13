@@ -86,6 +86,7 @@ const createSelection = (type) => {
         "Tras. VClear",
         "TechOne",
         "VClear",
+        "Others"
     ];
 
     const select = createElement("select", '', options);
